@@ -6,14 +6,16 @@
     */
 
     //ENTRADA
-  
+    let habitantes = 80000;
+    let quantAnos = 0;
 
     //PROCESSAMENTO
-    for (let contador = 0; popuIncial = 80000, popu < 200000; contador++) {
-        popu = popu * 1.03;
-        
-    }
+    for(let ano = 1; habitantes < 200000; ano++){
+        habitantes = habitantes * 1.03;
 
+        quantAnos = ano;
+    }
+   
     //SAÍDA
-    alert(`Será necessário ` + contador + ` anos`);
+   document.write(`A quantidade de anos que serão necessários é de ${quantAnos} anos`);
 </script>
