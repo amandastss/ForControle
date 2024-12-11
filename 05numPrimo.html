@@ -8,19 +8,16 @@
     //ENTRADA
    
     const numero = Number(prompt(`Informe um número:`));
-
+    primo = true
 
     //PROCESSAMENTO
-    for(let contador = 0; contador >numero.length; contador++){
+    for(let contador = 0; contador >numero; contador++){
+      if (numero <= 1 == false) {
+        alert(`O seu número não é primo!`);
+      } else if (numero) {
         
-       if (contador % 1 === 0 && contador % numero === 0) {
-
-        document.write(`Seu número ${numero} é primo`);
-       } else {
-        null
-       }
+      }
     }
-
     //SAÍDA
 
 </script>
