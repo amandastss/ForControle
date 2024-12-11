@@ -10,10 +10,17 @@
     */
 
     //ENTRADA
-    let listaDeLetras = ["a" , "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
+    let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
+    let minúsculas = [];
 
-
+    //PROCESSAMENTO
+    for (let contador = 0; contador < listaDeLetras.length; contador++) {
+        const letra = listaDeLetras[contador].toLowerCase();
+        if (minúsculas.includes(letra) === false) {
+            minúsculas.push(letra);
+        }
+    }
     
     //SAÍDA
-
+    document.write(minúsculas.sort());
 </script>
