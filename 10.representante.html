@@ -8,12 +8,32 @@
     */
 
     //ENTRADA 
-    const nomes = prompt(`Informe o nome de 3 candidatos a representantes de sala`);
     const quant = Number(prompt(`Qual a quantidade de alunos votantes:`));
-
+    let candidatos = [];
+    let votos = [0, 0, 0];
+ 
     //PROCESSAMENTO
- //bug commit
-
+    for (let contador = 0; contador < 3; contador++) {
+    const nome = prompt(`Informe o nome do candidato ${contador + 1}:`);
+    candidatos.push(nome);
+}
+    for (let contador = 0; contador < quant; contador++) {
+    const voto = prompt(`Em quem você deseja votar? ${candidatos.join(', ')}.`);
+        if (voto === candidatos[0]) {
+            votos[0]++;
+        } else if (voto === candidatos[1]) {
+            votos[1]++;
+        } else if (voto === candidatos[2]) {
+            votos[2]++;
+        } else {
+            alert("Voto inválido! Tente novamente.");
+            contador--; 
+        }
+}
     //SAÍDA
-
+    document.write("Resultado da votação:");
+    for (let contador = 0; contador < 3; contador++) {
+        const porcentagem = (votos[contador] / quant) * 100;
+        document.write(`${candidatos[contador]}: ${votos[contador]} votos (${porcentagem.toFixed(2)}%)`);
+}
 </script>
