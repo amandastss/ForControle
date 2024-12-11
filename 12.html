@@ -5,10 +5,16 @@
     */
 
     //ENTRADA
+    let valor = 1000;
+    const perc = 0.02;
+    let dias;
 
+    for (dias = 0; valor < 2000; dias++) {
+    valor += valor * perc; 
+    }
 
     //PROCESSAMENTO
-
+    document.write(`Vai demorar ${dias} dias para Joãozinho conseguir o valor`)
 
     //SAÍDA
 
